@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Convite para Isadora</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff0f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      color: #8b0000;
+      font-size: 2em;
+      margin-bottom: 30px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 20px;
+      position: relative;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .yes {
+      background-color: #32cd32;
+      color: white;
+    }
+
+    .no {
+      background-color: #dc143c;
+      color: white;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <h1>Isadora, você aceita ir comigo ver o filme do Ney Matogrosso no dia 1º de maio?</h1>
+  <div class="buttons">
+    <button class="yes" onclick="alert('Oba! Vai ser incrível! ❤️')">Sim</button>
+    <button class="no" onmouseover="moverBotao()">Não</button>
+  </div>
+
+  <script>
+    function moverBotao() {
+      const botao = document.querySelector('.no');
+      const largura = window.innerWidth - 100;
+      const altura = window.innerHeight - 100;
+
+      const novaEsquerda = Math.random() * largura;
+      const novoTopo = Math.random() * altura;
+
+      botao.style.left = novaEsquerda + 'px';
+      botao.style.top = novoTopo + 'px';
+    }
+  </script>
+</body>
+</html>
+
